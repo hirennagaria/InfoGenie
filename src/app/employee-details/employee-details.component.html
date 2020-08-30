@@ -1,0 +1,21 @@
+<h2><a routerLink="/employeedetails" *ngIf="showBackBtn"><mat-icon>arrow_back</mat-icon></a>
+Contacts ({{employeeCards.length}}) 
+
+<mat-form-field *ngIf="!showBackBtn">
+    <mat-label>Search</mat-label>
+    <input type="text" matInput [formControl]="searchControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let searchEmployee of filteredOptions | async" [value]="searchEmployee">
+        {{searchEmployee.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</h2>
+<mat-grid-list cols="4" >
+  <mat-grid-tile
+      *ngFor="let employeeCard of employeeCards"
+      [colspan]=1
+      [rowspan]=1>
+    <app-employee-card [employee]="employeeCard"></app-employee-card>
+  </mat-grid-tile>
+</mat-grid-list>

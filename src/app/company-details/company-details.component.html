@@ -1,0 +1,87 @@
+<mat-card class="company-card">
+  <mat-card-header>
+    <div mat-card-avatar class="company-header-image"></div>
+    <mat-card-title>{{company.name}}</mat-card-title>
+    <mat-card-subtitle>{{company.address}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="company-form">
+      <mat-form-field class="company-full-width">
+        <mat-label>Company Name</mat-label>
+        <input matInput value="{{company.name}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput value="{{company.address}}"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Phone</mat-label>
+        <span matPrefix>+91 &nbsp;</span>
+        <input type="tel" matInput value="{{company.phone}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Website</mat-label>
+        <input matInput value="{{company.website}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Ownership</mat-label>
+        <input matInput value="{{company.ownership}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>LinkedIn URL</mat-label>
+        <input matInput value="{{company.linkedinurl}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Parent Company</mat-label>
+        <input matInput value="{{company.parent}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Primary Industry</mat-label>
+        <input matInput value="{{company.primaryInd}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Revenue</mat-label>
+        <input matInput value="{{company.revenue}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>Employee Size</mat-label>
+        <input matInput value="{{company.employeeSize}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>SIC</mat-label>
+        <input matInput value="{{company.sic}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>NAICS</mat-label>
+        <input matInput value="{{company.naics}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>All Industry</mat-label>
+        <input matInput value="{{company.allInd}}">
+      </mat-form-field>
+
+      <mat-form-field class="company-full-width">
+        <mat-label>All SIC</mat-label>
+        <input matInput value="{{company.allSic}}">
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">Update</button>
+    <button mat-raised-button>Cancel</button>
+    <button mat-raised-button color="accent" routerLink="/employeedetails">Employees List</button>
+  </mat-card-actions>
+</mat-card>
